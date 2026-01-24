@@ -39,7 +39,13 @@ int main(){
    cout << "3rd Person: ";
    cin >> c;
    average = (a + b + c) / 3.0;
-   cout << "Average = " << average;
+   cout << "Average = " << average <<endl;
+   
+   bool isRaining;
+   cout << "Is it raining ? (1 Yes, 0 No): ";
+   cin >> isRaining;
+   cout << "Is it raining: " <<isRaining <<endl;
    return 0;
+
 
 }
