@@ -46,6 +46,20 @@ int main(){
    cin >> isRaining;
    cout << "Is it raining: " <<isRaining <<endl;
    return 0;
-
-
 }
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x, y, sum;
+    cout<< "Type a number: ";
+    cin>> x;
+    cout<< "Type another number: ";
+    cin>> y;
+    sum = x + y;
+    cout<< "Type first number: " << x <<endl << "And Type second number: " << y <<endl << "Sum is: " << sum <<endl;
+    return 0;
+}
+
