@@ -32,3 +32,31 @@ int main(){
    cout << "i am " <<isPass <<endl;
    return 0;
 }
+
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    string name = "Mohammad";
+    int age = 20;
+    float height = 5.2;
+    string village = "Changmary";
+    string subject = "Programming";
+    bool isPassed = true;
+    float cgpa = 3.50;
+    char grade = 'A';
+    name = "Abdullah";
+    age = 30;
+    int num1, num2;
+    num1 = 20, num2 = 30;
+    cout<< "My name is: " << name <<endl << "My age is: " << age <<endl << "My height is: " << height <<endl;
+    cout<< "My village is: " << village <<endl;
+    cout<< "My subject is: " << subject <<endl;
+    cout<< "I'm Passed: " << isPassed <<endl;
+    cout<< "My cgpa is: " << cgpa <<endl;
+    cout<< "My grade is: " << grade <<endl;
+    cout<< "Num1 is: " << num1 << "And" <<endl << "Num2 is: " << num2 <<endl;
+    return 0;
+}
