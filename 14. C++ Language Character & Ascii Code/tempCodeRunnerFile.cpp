@@ -1,0 +1,1 @@
+cout << "Character of ASCII 32: '" << (char)fourth << "'" << " (Space)" << endl;
