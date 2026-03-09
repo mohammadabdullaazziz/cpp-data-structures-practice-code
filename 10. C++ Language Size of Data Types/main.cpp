@@ -93,3 +93,93 @@ int main()
 
     return 0;
 }
+
+
+C++ এ মূলত ৫ ধরনের বেসিক ভেরিয়েবল সবচেয়ে বেশি ব্যবহৃত হয়:
+int	পূর্ণসংখ্যা (Integer)	int age = 25;	4 bytes
+float	ছোট দশমিক সংখ্যা	float price = 10.50;	4 bytes
+double	বড় দশমিক সংখ্যা (বেশি নিখুঁত)	double pi = 3.14159265;	8 bytes
+char	একটি মাত্র অক্ষর (Character)	char grade = 'A';	1 byte
+string	পুরো একটি শব্দ বা বাক্য	string name = "Zim";	variable
+bool	সত্য বা মিথ্যা (Boolean)	bool isCoding = true;	1 byte
+
+   
+int myNum = 15;        // পূর্ণসংখ্যা
+double myFloat = 5.99; // দশমিক
+char myLetter = 'D';   // অক্ষর (সবসময় single quote ' ' এর ভেতরে)
+string myText = "Hello"; // টেক্সট (সবসময় double quote " " এর ভেতরে)
+bool myBoolean = true; // সত্য/মিথ্যা 
+
+
+সংখ্যা এবং হিসাব (int)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int penPrice = 10;
+    int quantity = 5;
+    int total = penPrice * quantity; // দুটি পূর্ণসংখ্যার গুণ
+
+    cout << "Total Cost: " << total << " Taka" << endl;
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double myHeight = 5.8;
+    double friendHeight = 5.5;
+    double average = (myHeight + friendHeight) / 2;
+
+    cout << "Average Height: " << average << " feet" << endl;
+    return 0;
+}
+
+
+#include <iostream>
+#include <string> // স্ট্রিং ব্যবহারের জন্য এই হেডার ফাইল লাগে
+using namespace std;
+
+int main() {
+    string name = "Zim";
+    char grade = 'A'; // একটি মাত্র অক্ষরের জন্য single quote
+
+    cout << "Student: " << name << endl;
+    cout << "Grade: " << grade << endl;
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    bool isRaining = true;
+    bool isSunday = false;
+
+    cout << "Is it raining? " << isRaining << endl; // 1 দেখাবে
+    cout << "Is it Sunday? " << isSunday << endl;   // 0 দেখাবে
+    
+    return 0;
+}
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string city;
+    int temperature;
+
+    cout << "Enter your city name: ";
+    cin >> city; // স্ট্রিং ইনপুট
+
+    cout << "Enter current temperature: ";
+    cin >> temperature; // ইন্টিজার ইনপুট
+
+    cout << "In " << city << ", it is " << temperature << " degrees." << endl;
+
+    return 0;
+}
