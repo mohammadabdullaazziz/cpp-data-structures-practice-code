@@ -135,3 +135,132 @@ setprecision(2) কাজ করবে না।
 fixed কাজ করবে না।
 
 setw(10) কাজ করবে না।
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    // ১. স্ট্রিং এবং ক্যারেক্টার (Text & Symbols)
+    string userName = "Abdullah"; 
+    string village = "Changmary";
+    string subject = "Computer Science";
+    char userGrade = 'A';
+    char bloodGroup = '+'; // এক্সট্রা ক্যারেক্টার ডাটা
+
+    // ২. পূর্ণসংখ্যা (Integers)
+    int userAge = 29;
+    int rollNumber = 101;
+    long long nationalID = 1234567890123LL; // খুব বড় সংখ্যার জন্য long long
+
+    // ৩. দশমিক সংখ্যা (Floating Points)
+    float productPrice = 10.50f; 
+    float height = 5.8f;
+    double accountBalance = 20.896458358;
+    double cgpa = 3.85;
+
+    // ৪. বুলিয়ান (Logic)
+    bool isAccountActive = true; 
+    bool hasScholarship = false;
+
+    // ৫. কনস্ট্যান্ট (মান পরিবর্তন করা যাবে না)
+    const string COUNTRY = "Bangladesh";
+
+    // --- আউটপুট ডিজাইন ---
+    cout << "========================================" << endl;
+    cout << "        FULL USER DATA PROFILE          " << endl;
+    cout << "========================================" << endl;
+
+    cout << left << setw(18) << "Name"           << ": " << userName << endl;
+    cout << left << setw(18) << "Age"            << ": " << userAge << " years" << endl;
+    cout << left << setw(18) << "National ID"    << ": " << nationalID << endl;
+    cout << left << setw(18) << "Village"        << ": " << village << endl;
+    cout << left << setw(18) << "Subject"        << ": " << subject << endl;
+    cout << left << setw(18) << "Blood Group"    << ": B" << bloodGroup << endl;
+    
+    cout << "----------------------------------------" << endl;
+    
+    cout << left << setw(18) << "Height"         << ": " << height << " feet" << endl;
+    cout << left << setw(18) << "Product Price"  << ": $" << fixed << setprecision(2) << productPrice << endl;
+    cout << left << setw(18) << "CGPA"           << ": " << cgpa << endl;
+    cout << left << setw(18) << "Grade"          << ": " << userGrade << endl;
+    
+    // ৫ ঘর পর্যন্ত ব্যালেন্স
+    cout << left << setw(18) << "Account Balance"<< ": $" << fixed << setprecision(5) << accountBalance << endl;
+
+    cout << "----------------------------------------" << endl;
+    
+    // boolalpha দিয়ে true/false দেখানো
+    cout << boolalpha; 
+    cout << left << setw(18) << "Account Status" << ": " << isAccountActive << endl;
+    cout << left << setw(18) << "Scholarship"    << ": " << hasScholarship << endl;
+    cout << left << setw(18) << "Country"        << ": " << COUNTRY << endl;
+
+    cout << "========================================" << endl;
+
+    return 0;
+} 
+
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    // ১. টেক্সট এবং অক্ষর (Text & Character)
+    string name = "Abdullah";      // অনেকগুলো অক্ষর বা বাক্য
+    char grade = 'A';              // একটি মাত্র অক্ষর (Single Quote)
+    string village = "Changmary";  // আরও একটি টেক্সট ডাটা
+
+    // ২. পূর্ণসংখ্যা (Integers)
+    int age = 29;                  // সাধারণ পূর্ণসংখ্যা
+    long long phone = 88017000000; // অনেক বড় সংখ্যার জন্য long long
+    short roomNumber = 101;        // ছোট সংখ্যার জন্য (মেমোরি কম নেয়)
+
+    // ৩. দশমিক সংখ্যা (Floating Points)
+    float height = 5.8f;           // সাধারণ দশমিক (শেষে f দিতে হয়)
+    double balance = 20.896458358; // অনেক বড় এবং নিখুঁত দশমিক সংখ্যা
+    float price = 10.50f;          // পণ্যের দাম
+
+    // ৪. লজিক (Boolean)
+    bool isStudent = true;         // শুধু true (১) অথবা false (০)
+    bool isGraduated = false;
+
+    // ৫. কনস্ট্যান্ট (মান যা আর বদলানো যাবে না)
+    const double PI = 3.14159;
+
+    // --- আউটপুট ---
+    cout << "===== All Data Types Profile =====" << endl;
+    
+    cout << "Name        : " << name << endl;
+    cout << "Age         : " << age << " years" << endl;
+    cout << "Phone       : " << phone << endl;
+    cout << "Village     : " << village << endl;
+    
+    cout << "Height      : " << height << " feet" << endl;
+    cout << "Grade       : " << grade << endl;
+    cout << "Price       : $" << price << endl;
+
+    // ব্যালেন্স ৫ ঘর পর্যন্ত দেখাচ্ছি
+    cout << "Balance     : $" << fixed << setprecision(5) << balance << endl;
+
+    // true/false সরাসরি দেখানোর জন্য boolalpha
+    cout << boolalpha; 
+    cout << "Is Student  : " << isStudent << endl;
+    cout << "Graduated   : " << isGraduated << endl;
+    
+    cout << "Constant PI : " << PI << endl;
+    cout << "==================================" << endl;
+
+    return 0;
+}
+
+
+
+
+
