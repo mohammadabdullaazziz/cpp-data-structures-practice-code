@@ -40,41 +40,65 @@ int main(){
 
 #include <iostream>
 #include <string>
+#include <iomanip> // দশমিকের ঘর এবং ফরম্যাটিং এর জন্য
+
 using namespace std;
 
-int main()
-{
-    string name = "Mohammad";
-    int age = 20;
-    float height = 5.2;
-    string village = "Changmary";
-    string subject = "Programming";
-    bool isPassed = true;
-    float cgpa = 3.50;
-    char grade = 'A';
+int main() {
+    // --- ১. টেক্সট ডাটা (Strings) ---
+    string name        = "Abdullah"; // সরাসরি আপডেট করা নাম
+    string village     = "Changmary";
+    string subject     = "Programming";
+    string gmail       = "Programmeraziz216@gmail.com";
+    string phoneNumber = "01568451112";
+    const string COUNTRY = "Bangladesh"; // দেশের নাম কনস্ট্যান্ট রাখা ভালো
 
-    // value change
-    name = "Abdullah";
-    age = 30;
+    // --- ২. পূর্ণসংখ্যা ও অক্ষর (Integer & Char) ---
+    int age          = 30;
+    char grade       = 'A';
+    char bloodGroup  = '+';
 
-    int num1 = 20, num2 = 30;
+    // --- ৩. দশমিক সংখ্যা (Floating Points) ---
+    float height          = 5.2f;
+    double accountBalance = 96.8965423589;
 
-    cout << "------ Student Information ------" << endl;
+    // --- ৪. লজিক (Booleans) ---
+    bool isPass      = true;
+    bool isGraduated = false;
 
-    cout << "My name is: " << name << endl;
-    cout << "My age is: " << age << endl;
-    cout << "My height is: " << height << endl;
-    cout << "My village is: " << village << endl;
-    cout << "My subject is: " << subject << endl;
-    cout << "I'm Passed: " << isPassed << endl;
-    cout << "My CGPA is: " << cgpa << endl;
-    cout << "My grade is: " << grade << endl;
+    // --- আউটপুট সেকশন ---
+    cout << "--------------- Student Information -----------------" << endl;
+    
+    cout << "My name is         : " << name << endl;
+    cout << "My age is          : " << age << endl;
+    cout << "My height is       : " << height << " feet" << endl;
+    cout << "My village is      : " << village << endl;
+    cout << "My subject is      : " << subject << endl;
+    cout << "My Grade is        : " << grade << endl;
 
-    cout << "Num1 is: " << num1 << endl;
-    cout << "Num2 is: " << num2 << endl;
+    // boolalpha দিলে 1/0 এর বদলে true/false দেখাবে
+    cout << boolalpha; 
+    cout << "I'am Passed        : " << isPass << endl;
+    cout << "I'am Graduated     : " << isGraduated << endl;
+
+    // দশমিকের পর ৫ ঘর পর্যন্ত ব্যালেন্স দেখাচ্ছি
+    cout << fixed << setprecision(5);
+    cout << "My account balance : $" << accountBalance << endl;
+
+    cout << "My blood group is  : " << bloodGroup << endl;
+    cout << "My country is      : " << COUNTRY << endl;
+    cout << "My gmail is        : " << gmail << endl;
+    cout << "My phone number is : " << phoneNumber << endl;
+
+    cout << "----------------------------------------------------" << endl;
 
     return 0;
 }
+
+
+
+
+
 
 #include <iostream>
 #include <string> // string ব্যবহারের জন্য এটি রাখা ভালো প্র্যাকটিস
@@ -259,6 +283,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
