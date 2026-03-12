@@ -81,9 +81,35 @@ int main() {
     cout << "I'am Passed        : " << isPass << endl;
     cout << "I'am Graduated     : " << isGraduated << endl;
 
+    আসলে boolalpha কোনো টেক্সট হিসেবে প্রিন্ট হয় না। এটি একটি I/O Manipulator, যার কাজ হলো এর পরবর্তী বুলিয়ান (bool) ভেরিয়েবলগুলোর আউটপুট কেমন হবে তা ঠিক করে দেওয়া।
+    boolalpha ছাড়া: true হলে 1 এবং false হলে 0 প্রিন্ট হয়।
+    boolalpha দিলে: true হলে সরাসরি true এবং false হলে false প্রিন্ট হয়।
+    এটি স্ক্রিনে কিছু লিখে দেখাবে না, বরং পর্দার আড়ালে কাজ করে আউটপুট ফরম্যাট বদলে দেয়।
+        
+    bool isPass = true;
+
+    cout << isPass;            // আউটপুট আসবে: 1
+    cout << boolalpha;         // এখানে কিছুই প্রিন্ট হবে না, শুধু মোড পরিবর্তন হবে
+    cout << isPass;            // এখন আউটপুট আসবে: true
+
+    আবার 1 এবং 0 তে ফিরে যেতে
+
+    cout << boolalpha << true << endl;   // আউটপুট: true
+    cout << noboolalpha << true << endl; // আউটপুট: 1
+
     // দশমিকের পর ৫ ঘর পর্যন্ত ব্যালেন্স দেখাচ্ছি
     cout << fixed << setprecision(5);
     cout << "My account balance : $" << accountBalance << endl;
+
+    এটিও ঠিক boolalpha এর মতোই কাজ করে। fixed এবং setprecision কোনো সাধারণ টেক্সট নয় যে তারা সরাসরি স্ক্রিনে প্রিন্ট হবে। এদের বলা হয় I/O Manipulators।
+    এদের কাজ হলো কম্পিউটারকে ইনস্ট্রাকশন বা নির্দেশ দেওয়া যে, পরবর্তী সংখ্যাগুলো সে কীভাবে দেখাবে।
+    fixed: এটি কম্পিউটারকে বলে, "দশমিক সংখ্যাটিকে বৈজ্ঞানিক ফরমেটে (যেমন 2.0e+01) না দেখিয়ে সাধারণ স্থির (Fixed) ফরমেটে দেখাও।
+    "setprecision(5): এটি কম্পিউটারকে বলে, "দশমিকের পর ঠিক ৫টি ঘর দেখাও।"
+
+    cout << fixed << setprecision(5);
+   তখন স্ক্রিনে কিছু লেখা আসে না, কিন্তু কম্পিউটার তার মেমরিতে সেট করে নেয় যে "এখন থেকে কোনো দশমিক সংখ্যা আসলে আমি ৫ ঘর দেখাবো"।
+   একই লাইনে এভাবে লিখলে কোড আরও পরিষ্কার থাকে:
+   cout << "Balance : $" << fixed << setprecision(5) << accountBalance << endl;
 
     cout << "My blood group is  : " << bloodGroup << endl;
     cout << "My country is      : " << COUNTRY << endl;
@@ -283,6 +309,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
