@@ -36,6 +36,16 @@
 // return 0;
 // }
 
+Data Type           Size (in bytes)
+------------------------------------------
+char                1 byte
+short               2 bytes
+int                 4 bytes
+long long           8 bytes
+float               4 bytes
+double              8 bytes
+bool                1 byte
+------------------------------------------
 // #include <iostream>
 // #include <iomanip>
 // #include <string>
@@ -50,9 +60,37 @@
 //     return 0;
 // }
 
+৪টি ঘর ব্যবহার হয়েছে "Name" অক্ষরগুলোর জন্য।
+
+৬টি ঘর খালি (Space) রয়ে গেছে।
+
+মোট ১০টি ঘরই কিন্তু "Name" এর কলামের জন্য বরাদ্দ।
+
+যখন setw(10) লিখেছ, তখন কম্পিউটার স্ক্রিনে ১০টি অদৃশ্য ক্যারেক্টার বক্স তৈরি করেছে:
+[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ] (মোট ১০টি খালি ঘর)
+
+যখন left এবং "Name" ব্যবহার করেছ, তখন সেই ১০টি ঘরের বাম দিক থেকে "Name" বসানো শুরু হয়েছে:
+[N][a][m][e][ ][ ][ ][ ][ ][ ]
+
+সি++ এ setw(n) শুধুমাত্র তার পরবর্তী একটি আইটেমকে নিয়ন্ত্রণ করে। একবার সেই আইটেমটি প্রিন্ট হয়ে গেলে setw এর ক্ষমতা শেষ হয়ে যায়। 
+তাই পরবর্তী স্ট্রিং বা ডাটাকে যদি তুমি আবার নির্দিষ্ট দূরত্বে পাঠাতে চাও, তবে তোমাকে নতুন করে আবার setw() লিখতে হবে।
+
+cout << left << setw(10) << "Name" 
+     << left << setw(10) << "ID" 
+     << "Number" << endl;
+
+"Name" এর জন্য ১০ ঘর বরাদ্দ।
+
+"ID" এর জন্য ১০ ঘর বরাদ্দ।
+
+"Number" এর জন্য কোনো নির্দিষ্ট ঘর বরাদ্দ নেই, সে শুধু লেখাটি প্রিন্ট করে লাইন শেষ করে দিচ্ছে।
+
+
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <limits>   // numeric_limits এর জন্য
+
 using namespace std;
 
 int main()
@@ -61,41 +99,53 @@ int main()
     int id1, id2;
     string phone1, phone2;
 
-   
+    // ---------- প্রথম ব্যক্তির ইনপুট ----------
     cout << "Enter first person's Name: ";
-    cin >> name1;
+    getline(cin, name1);
+
     cout << "Enter ID: ";
     cin >> id1;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // বাফার পরিষ্কার
+
     cout << "Enter Phone Number: ";
-    cin >> phone1;
+    getline(cin, phone1);
 
     cout << "\n---------------------------\n";
 
-   
+    // ---------- দ্বিতীয় ব্যক্তির ইনপুট ----------
     cout << "Enter second person's Name: ";
-    cin >> name2;
+    getline(cin, name2);
+
     cout << "Enter ID: ";
     cin >> id2;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // আবার বাফার পরিষ্কার
+
     cout << "Enter Phone Number: ";
-    cin >> phone2;
+    getline(cin, phone2);
 
     cout << "\n\nFinal Output Table:\n";
 
-   
+    // ---------- টেবিল হেডার ----------
     cout << left << setw(15) << "Name"
          << left << setw(10) << "ID"
          << "Number" << endl;
+
     cout << "------------------------------------------" << endl;
 
- 
-    cout << left << setw(15) << name1 << setw(10) << id1 << phone1 << endl;
-    cout << left << setw(15) << name2 << setw(10) << id2 << phone2 << endl;
+    // ---------- ডাটা আউটপুট ----------
+    cout << left << setw(15) << name1
+         << left << setw(10) << id1
+         << phone1 << endl;
+
+    cout << left << setw(15) << name2
+         << left << setw(10) << id2
+         << phone2 << endl;
 
     return 0;
 }
 
 
-
+Advanced---------------------------
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -183,3 +233,4 @@ Plaintext
 ========================================
 Name                ID             Phone Number
 ----------------------------------------
+
