@@ -218,6 +218,7 @@ int main() {
     // ৪. বুলিয়ান (Logic)
     bool isAccountActive = true; 
     bool hasScholarship = false;
+    bool married = true;
 
     // ৫. কনস্ট্যান্ট (মান পরিবর্তন করা যাবে না)
     const string COUNTRY = "Bangladesh";
@@ -251,6 +252,7 @@ int main() {
     cout << left << setw(18) << "Account Status" << ": " << isAccountActive << endl;
     cout << left << setw(18) << "Scholarship"    << ": " << hasScholarship << endl;
     cout << left << setw(18) << "Country"        << ": " << COUNTRY << endl;
+     cout << left << setw(18) << "Married" << ":" << " " << (married ? "Yes" : "No") << endl;
 
     cout << "========================================" << endl;
 
