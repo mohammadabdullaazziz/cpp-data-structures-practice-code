@@ -1,3 +1,22 @@
+C++ এ ব্যবহারকারীর কাছ থেকে ইনপুট (User Input) নেওয়ার জন্য cin (Character Input) অবজেক্ট এবং >> (Extraction Operator) ব্যবহার করা হয়, যা <iostream> লাইব্রেরির অংশ। 
+এটি কীবোর্ড থেকে তথ্য পড়ে এবং ভেরিয়েবলে সংরক্ষণ করে। 
+সাধারণ ইনপুটের জন্য cin >> variable; এবং পূর্ণ লাইন বা স্পেসসহ টেক্সটের জন্য getline(cin, stringVariable); ব্যবহার করা হয়। 
+সিনট্যাক্স ব্যাখ্যা:
+cin (Character Input) হলো iostream হেডার ফাইলের একটি অংশ। এটি ব্যবহার করতে হয় Extraction Operator (>>) এর সাথে।
+
+সীমাবদ্ধতা: এটি Space (ফাঁকা জায়গা) বা Enter পেলে ইনপুট নেওয়া বন্ধ করে দেয়। আপনি নাম দিতে চাইলেন "Mohammad Abdullah", কিন্তু cin শুধু "Mohammad" টুকু নিবে।
+   
+getline() এর ব্যবহার (পুরো লাইন ইনপুট)
+যদি স্পেসসহ কোনো নাম বা বাক্য ইনপুট নিতে চাওয়া হয়, তবে getline() ব্যবহার করা বাধ্যতামূলক।
+
+
+C++ এ একই লাইনে অনেকগুলো ইনপুট নেওয়া যায়। একে বলা হয় Cascading।
+int age;
+string city;
+cout << "Enter age and city: ";
+cin >> age >> city;
+
+
 /*
 #include <iostream>
 using namespace std;
