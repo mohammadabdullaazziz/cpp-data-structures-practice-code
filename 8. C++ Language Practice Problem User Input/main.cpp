@@ -62,6 +62,68 @@ int main()
     cout<< "Type first number: " << x <<endl << "And Type second number: " << y <<endl << "Sum is: " << sum <<endl;
     return 0;
 }
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+     int num1, num2;
+     cout<< "Enter first integer number: ";
+     cin>> num1;
+     cout << "Enter second integer number: ";
+     cin>> num2;
+     cout << "Numbers are: " << "Num1 "  <<num1 << " And Num2 " <<num2 <<endl;
+     return 0;
+}
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+     int num1, num2;
+     cout<< "Enter two integer number (space): ";
+     cin>> num1 >> num2;
+     cout << "Numbers are: " << "Num1 "  <<num1 << " And Num2 " <<num2 <<endl;
+     return 0;
+}
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+     int num1, num2, sum;
+
+     cout<< "Enter first integer number: ";
+     cin>> num1;
+
+     cout << "Enter second integer number: ";
+     cin >> num2;
+
+     sum = num1 + num2;
+
+     cout << "Num1 is: " <<num1 << " And Num2 is: " <<num2 << " Total is: " <<sum <<endl;
+     return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #include <iostream>
 #include <iomanip>
